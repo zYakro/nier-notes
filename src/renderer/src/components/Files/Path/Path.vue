@@ -2,9 +2,12 @@
 
 import TextInput from '../../TextInput/TextInput.vue'
 import BasicButton from '../../Buttons/BasicButton/BasicButton.vue'
+const { platform } = require('node:process')
 
 import { ref } from 'vue';
 import { useDrag } from '../../../composables/useDrag';
+
+const pathSeparator = platform === 'win32' ? '\\' : '/'
 
 const { handleDrop } = useDrag()
 const props = defineProps(['path'])
@@ -14,7 +17,7 @@ const inputValue = ref(props.path)
 const showInput = ref(false)
 
 const getPathFromIndex = (index) => {
-  return props.path.split('/').slice(0, index + 1).join('/')
+  return props.path.split(pathSeparator).slice(0, index + 1).join(pathSeparator)
 }
 
 const changePath = (index, e) => {
@@ -52,7 +55,7 @@ const moveFileOnFileDrop = (index, event) => {
     <div class="path">
         <div class="path-items" v-if="!showInput" @click="displayInput">
             <div class="tab-button-line"
-                v-for="(item, index) in path.split('/').slice(-7)" 
+                v-for="(item, index) in path.split(pathSeparator).slice(-7)" 
                 :key="index" 
                 @click="changePath(index, $event)"
                 @drop="moveFileOnFileDrop(index, $event)"
