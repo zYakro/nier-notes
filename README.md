@@ -4,10 +4,11 @@ A Nier: Automata themed note-taking app
 
 ## Features
 
-* File browser
+* File browser & file info
 * Create, delete, rename and move files directly in the file browser
 * Text file editor
 * Nier: Automata themed app
+* Recent files and current path are storaged locally
 
 ## Screenshots
 
@@ -21,8 +22,9 @@ A Nier: Automata themed note-taking app
 
 ## Project Setup
 
-This project was made using Electron-Vite package, and Vue.
-To install this project you can go to 
+This project was made using Electron-Vite package, Vue and Sass.
+To install this project you can go to releases. Or build it locally
+following the next steps:
 
 ### Clone the repository
 
