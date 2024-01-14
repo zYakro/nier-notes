@@ -1,0 +1,77 @@
+@import '@/styles/colors.sass'
+
+@mixin basic-button
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    flex-direction: row
+    background-color: red
+    background: linear-gradient(to right, rgba(71,68,60,1) 50%, rgba(158,153,134, 0) 50%)
+    background-size: 200% 100%
+    background-position: right bottom
+    width: auto
+    padding: 0 5px
+    height: 28px
+    cursor: pointer
+    transition: background .3s ease-out, color .3s ease-in-out
+
+    &-line
+        border-top: 2px solid transparent
+        border-bottom: 2px solid transparent
+        width: auto
+        height: 35px
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        transition: border .3s ease-in-out
+
+        &:hover
+            background-position: left bottom
+            border-color: $brown-color
+
+
+        &:hover > .basic-button
+            background-position: left bottom
+            color: $light-color
+
+        &:hover > .basic-button > .basic-button-square
+            background-color: $light-color
+
+        &:hover > .basic-button > .basic-button-square > .basic-icon
+            filter: var(--icon-brown-color)
+
+        &:hover > .basic-button-text
+            display: flex
+
+    .button-icon
+        filter: var(--icon-light-color)
+
+    &-square
+        background-color: $brown-color
+        width: 15px
+        height: 15px
+        padding: 2px
+        margin-right: 5px
+        transition: background 0.3s ease-out
+        display: flex
+        justify-content: center
+        align-items: center
+
+@mixin basic-button-selector
+    &:hover::before
+        background: url("@/assets/pointer.svg") no-repeat
+        background-size: contain
+        opacity: 1
+
+    &::before
+        content: ''
+        display: block
+        position: absolute
+        margin-left: -35px
+        width: 30px
+        height: 18px
+        opacity: 0
+        transition: background .3s, opacity .5s ease-in-out
+
+
+

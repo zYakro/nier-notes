@@ -1,0 +1,56 @@
+:root {
+  --icon-brown-color: invert(24%) sepia(24%) saturate(220%) hue-rotate(6deg) brightness(95%) contrast(90%);
+  --icon-light-color: invert(86%) sepia(12%) saturate(344%) hue-rotate(11deg) brightness(87%) contrast(85%);
+  --icon-light-section-color: invert(100%) sepia(89%) saturate(342%) hue-rotate(327deg) brightness(87%) contrast(87%);
+}
+
+.icon-pencil,
+.icon-circle,
+.icon-folder,
+.icon-file,
+.icon-back-slash,
+.icon-x,
+.icon-plus,
+.icon-location-arrow{
+  display: inline-block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat !important;
+  z-index: 1;
+  transition: filter .1s ease-in-out;
+  filter: var(--icon-light-color)
+}
+
+.icon-plus{
+  background: url('../assets/icons/plus.svg')
+}
+
+.icon-x{
+  background: url('../assets/icons/x.svg')
+}
+
+.icon-back-slash{
+  background: url('../assets/icons/back-slash.svg')
+}
+
+.icon-file{
+  background: url('../assets/icons/file.svg')
+}
+
+.icon-location-arrow{
+    background: url('../assets/icons/location-arrow.svg')
+}
+
+.icon-folder{
+  background: url('../assets/icons/folder.svg')
+}
+
+.icon-pencil{
+    background: url('../assets/icons/pencil.svg')
+}
+
+.icon-circle{
+  background: url('../assets/icons/circle.svg')
+}
