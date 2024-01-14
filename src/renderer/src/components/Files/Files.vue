@@ -33,7 +33,7 @@
 import { ref, watch } from 'vue';
 
 import SystemMessageYesNo from '../SystemMessage/SystemMessageYesNo.vue';
-import SystemMessageButton from '../SystemMessage/SystemMessageButton.vue';
+import SystemMessageOk from '../SystemMessage/SystemMessageOk.vue';
 import Entry from '../Entry/Entry.vue';
 import RecentFiles from './RecentFiles/RecentFiles.vue'
 import FileNavigator from './FileNavigator/FileNavigator.vue';
